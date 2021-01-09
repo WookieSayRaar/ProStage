@@ -1,5 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block contenu %}
+{% block title %}  PROSTAGE - Bienvenue ! {% endblock %}
+
 <h1>Bienvenue sur la page d'acceuil de Prostages</h1>
+
+{% block contenuPage %}
+<h1>Bienvenue sur la page d'acceuil de Prostages</h1>
+<div>
+  <table class="table">	<!-- Tableau des stages proposés -->
+  	<thead>
+  		<tr>
+  			<th scope="col">Titre</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Formations</th>
+  	    <th scope="col">Entreprise</th>
+  	    <th scope="col">Domaine</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  	</tbody>
+  </table>
+</div>
 {% endblock %}
