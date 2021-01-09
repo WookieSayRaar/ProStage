@@ -2,10 +2,9 @@
 
 {% block title %}  PROSTAGE - Bienvenue ! {% endblock %}
 
-<h1><center>Bienvenue sur la page d'acceuil de Prostages</center></h1>
 
+{% block titrePage %}<h1><center>Bienvenue sur la page d'acceuil de Prostages</center></h1>{% endblock %}
 {% block contenuPage %}
-<h1>Bienvenue sur la page d'acceuil de Prostages</h1>
 <div>
   <table class="table">	<!-- Tableau des stages proposés -->
   	<thead>
@@ -20,5 +19,8 @@
   	<tbody>
   	</tbody>
   </table>
+
+  <button type="button" class="btn btn-primary btn-lg">Voir les entreprises</button>
+  <button type="button" class="btn btn-secondary btn-lg">Voir les formations</button>
 </div>
 {% endblock %}
