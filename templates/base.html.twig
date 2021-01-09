@@ -29,6 +29,12 @@
           							 <a class="nav-link" href="#">Formations</a>
           						</li>
           					</ul>
+          					<ul class="navbar-nav ml-md-auto">
+
+          						<li class="nav-item dropdown">
+          							 <a class="nav-link" href="#">Déconnexion</a>
+          						</li>
+          					</ul>
           				</div>
           			</nav>
           		</div>
@@ -47,11 +53,23 @@
                 </div>
             </div>
         {% endblock %}
-        {% block footer %}
-        <div class="row">
-          <div class="col-md-12">
-          </div>
-        </div>
+        {% block bouton %}
+
+            <div class="row my-3">
+                <div class="col-md-12">
+                    <!-- Par defaut  bouton de retour pour revenir à la page d'accueil -->
+                    {% block lienBouton %}
+                    <a href="javascript:history.back()"
+                    {% endblock %}
+                      <button type="button" class="boutonRetour">
+                          {% block labelBouton %}
+                                  Retour
+                              {% endblock %}
+                      </button>
+                    </a>
+                </div>
+            </div>
+
         {% endblock %}
         {% block javascripts %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
