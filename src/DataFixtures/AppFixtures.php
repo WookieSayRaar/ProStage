@@ -104,15 +104,15 @@ class AppFixtures extends Fixture
                 $stage -> setExperienceRequise($faker->sentence($nbWords = 6, $variableNbWords = true));
                 $stage -> setEmail($faker->sentence($nbWords = 6, $variableNbWords = true));
                 $stage -> setContact($faker->sentence($nbWords = 6, $variableNbWords = true));
-                // Création relation Ressource --> Module
+                // Création relation Stage --> Formation
                 $stage -> addFormation($formation);
 
-                /****** Définir et mettre à jour le type de ressource ******/
-                // Sélectionner un type de ressource au hasard parmi les 8 types enregistrés dans $tableauTypesRessources
-                $numEntreprise = $faker->numberBetween($min = 0, $max = 7);
-                // Création relation Ressource --> TypeRessource
+                /****** Définir et mettre à jour l'entreprise' ******/
+                // Sélectionner une entreprise au hasard parmi les 5 entreprises enregistrées dans $tableauEntreprises
+                $numEntreprise = $faker->numberBetween($min = 0, $max = 4);
+                // Création relation Stage --> Entreprise
                 $stage -> setEntreprise($tableauEntreprises[$numEntreprise]);
-                // Création relation TypeRessource --> Ressource
+                // Création relation Entreprise --> Stage
                 $tableauEntreprises[$numEntreprise] -> addStage($stage);
 
                 // Persister les objets modifiés
